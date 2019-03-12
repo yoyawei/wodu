@@ -1,0 +1,46 @@
+<!--pages/message/message.wxml-->
+
+<import src="../template/loadTemp.wxml" />
+<template is="load" data="{{load}}" />
+
+<view class='wel' hidden='{{login}}'>
+  <button class='welbtn' catchtap='toWel'> 登录 / 注册 </button>
+</view>
+
+<view class='container' hidden='{{!login}}'>
+  <view class='title'>平台通知</view>
+  <view class='noticepart'>
+    <view class='noticeicon' bindtap='tono'>
+      <view class='iconimg'>
+        <image src='/images/icons/toread.png'></image>
+      </view>
+      <view class='icontext'>未读</view>
+    </view>
+    <view class='noticeicon' bindtap='toyes'>
+      <view class='iconimg'>
+        <image src='/images/icons/read.png'></image>
+      </view>
+      <view class='icontext'>已读</view>
+    </view>
+  </view>
+
+  <view class='title'>评论与回复</view>
+  <view class='candr'>
+    <block wx:for='{{messages}}'>
+      <view class='critem' bindtap='toComment' data-commentid='{{item.commentId}}'>
+        <view class='crimg'>
+          <image src='/images/icons/replyinfo.png' hidden='{{item.commentType==0?0:1}}'></image>
+          <image src='/images/icons/commentinfo.png' hidden='{{item.commentType==1?0:1}}'></image>
+        </view>
+        <view class='crcontent'>
+          <view class='crname'>{{item.fromName}}
+            <text hidden='{{item.commentType==0?0:1}}'>回复了你</text>
+            <text hidden='{{item.commentType==1?0:1}}'>评论了你的书评</text>
+          </view>
+          <view class='crdetail'>{{item.content}}</view>
+          <view class='time'>{{item.commentTime}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

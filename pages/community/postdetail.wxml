@@ -1,0 +1,65 @@
+<!--pages/community/community.wxml-->
+
+<import src="../template/loadTemp.wxml" />
+<template is="load" data="{{load}}" />
+
+<view class='container'>
+  <view class='post'>
+    <view class='avatar'>
+      <image src='{{post.pictureUrl}}' catchtap='toUser' data-userid='{{post.userId}}'></image>
+    </view>
+    <view class='detail'>
+      <view class='name'>
+        <text class='username' catchtap='toUser' data-userid='{{post.userId}}'>{{post.nickName
+}}</text> 评
+        <text class='bookname' catchtap='toBook' data-bookid='{{post.bookId}}'>《{{post.bookName}}》</text>
+      </view>
+      <view class='time'>{{post.pubDate}}</view>
+      <view class='title' >“{{post.title}}”</view>
+      <view class='dcontent'>{{post.content}}</view>
+      <image class='postimg' hidden='{{!post.pictures}}' src='{{url + post.pictures}}' mode='aspectFit' catchtap='previewImg' data-http='{{url + post.pictures}}'></image>
+
+      <view class='actions'>
+        <view catchtap='Star'>
+          <image src='/images/icons/star.png'></image>{{post.stars}}
+        </view>
+        <view catchtap='ctobook'>
+          <image src='/images/icons/comment.png'></image>{{post.commentCnt}}
+        </view>
+        <view catchtap='toReport' data-userid='{{post.userId}}' data-commentid='{{post.commentId}}' data-title='{{post.title}}' data-content='{{post.content}}'>
+          <image src='/images/icons/report.png'></image>举报
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='ctitle'>评论</view>
+  <view class='comments'>
+    <block wx:for='{{comments}}'>
+      <view class='comment'>
+        <view class='cavatar'>
+          <image src='{{item.fromIdPic}}' catchtap='toUser' data-userid='{{item.fromId}}'></image>
+        </view>
+        <view class='cdetail' catchtap='ctouser' data-ucommentid='{{item.uCommentId}}' data-fname='{{item.fromName}}'>
+          <view class='cinfo'>
+            <view catchtap='toReport2' data-userid='{{item.fromId}}' data-ucommentid='{{item.uCommentId}}' data-content='{{item.ucontent}}' class='report'>
+              <image src='/images/icons/minreport.png'></image>
+            </view>
+            <text class='cname' catchtap='toUser' data-userid='{{item.fromId}}'>{{item.nickName
+}}{{item.fromName}}</text>
+            <text hidden='{{item.commentType==0?0:1}}'> 评论 </text>
+            <text hidden='{{item.commentType==0?1:0}}'> 回复 </text>
+            <text class='cname' catchtap='toUser' data-userid='{{item.atId}}' hidden='{{item.commentType==0?1:0}}'>{{item.atName}}</text>
+          </view>
+          <view class='ctime'>{{item.time}}</view>
+          <view class='ccontent'>{{item.ucontent}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class='textwrap'>
+    <textarea fixed='true' auto-height='true' bindinput='setContent' value='{{addcomment}}' placeholder='{{placeword}}' adjust-position></textarea>
+    <view class='textbtn' bindtap='newcomment'>评论</view>
+  </view>
+</view>

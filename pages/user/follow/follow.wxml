@@ -1,0 +1,21 @@
+<!--pages/user/follow/follow.wxml-->
+
+<import src="../../template/loadTemp.wxml" />
+<template is="load" data="{{load}}" />
+
+<view class='container'>
+  <view class='follows'>
+    <block wx:for='{{follows}}'>
+      <view class='follow'>
+        <view class='favatar' catchtap='toUser' data-userid='{{item.userId}}'>
+        <image src='{{item.pictureUrl}}'></image>
+        </view>
+        <view class='finfo'>
+          <view class='fname' catchtap='toUser' data-userid='{{item.userId}}'>{{item.nickName}}</view>
+          <button class='actbtn' catchtap='unfollow' data-fid='{{item.userId}}'>取消关注</button>
+        </view>
+      </view>
+
+    </block>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+/* pages/home/activity/vote/vote.wxss */
+@import "/pages/home/project/provide/provide.wxss";
+
+.container{
+  padding-bottom: 20rpx;
+}
+
+.tip{
+  font-size: 32rpx;
+  color: #333;
+  padding: 40rpx;
+}

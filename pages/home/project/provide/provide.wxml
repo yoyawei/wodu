@@ -1,0 +1,26 @@
+<!--pages/home/project/provide/provide.wxml-->
+
+<import src="../../../template/loadTemp.wxml" />
+<template is="load" data="{{load}}" />
+
+<view class='container'>
+  <block wx:for='{{books}}'>
+    <view>
+      <view class='line'></view>
+      <view class='book'>
+        <view class='bookimg'>
+          <image src='{{url + item.bookImg}}' mode='aspectFill' catchtap='toBook' data-bookid='{{item.isbn}}'></image>
+        </view>
+        <view class='bookdes' catchtap='toBook' data-bookid='{{item.isbn}}'>
+          <text class='booktitle'>{{item.name}}</text>
+          <text>{{item.author}}</text>
+          <text>{{item.pubHouse}}</text>
+          <text><text class='readnum'>{{item.readCnt}}</text>人借阅 </text>
+          <text>剩余<text class='booknum'>{{item.stock}}</text>本</text>
+          <button class='bookbtn' catchtap='toGet' data-bookid='{{item.isbn}}' data-bookname='{{item.name}}' plain='{{!item.stock}}' disabled='{{!item.stock}}'>预约领书</button>
+        </view>
+      </view>
+    </view>
+  </block>
+  <view class='nomore' hidden='{{!isLoading}}'>没有更多了...</view>
+</view>

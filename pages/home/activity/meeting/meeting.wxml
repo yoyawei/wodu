@@ -1,0 +1,21 @@
+<!--pages/home/activity/meeting/meeting.wxml-->
+<!-- 待定模块   -->
+<view class='tip' hidden='{{istip}}'>活动暂未开启，敬请期待...</view>
+<!-- <view class='meeting-container'>
+ <text class='unit'>往期回顾</text>
+  <block wx:for='{{meetings}}'>
+    <view class='meeting-item'>
+      <text class='time'>{{item.time}} 第{{item.order}}期</text>
+      <text class='title'>{{item.name}}</text>
+      <image class='img' src='{{item.img}}'  mode='aspectFill'></image>
+      <text class='content'>{{item.content}}</text>
+    </view>
+  </block>
+  <text class='unit bottompart'>下期预告</text>
+    <view class='meeting-item bottompart'>
+      <text class='time'>{{next.time}} 第{{next.order}}期</text>
+      <text class='title'>{{next.name}}</text>
+      <image class='img' src='{{next.img}}'></image>
+      <text class='content'>{{next.content}}</text>
+    </view>
+</view> -->

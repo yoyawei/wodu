@@ -1,0 +1,44 @@
+/* pages/home/project/want/want.wxss */
+@import "../provide/provide.wxss";
+
+.searcharea{
+  display: flex;
+  flex-direction: row;
+  height: 88rpx;
+  margin: 20rpx 40rpx;
+  border-bottom: 1rpx solid #f1dfdf;
+}
+
+.searcharea label{
+   font-size: 34rpx;
+   color: #333; 
+   line-height: 68rpx;
+   margin-right: 20rpx;
+}
+
+.searcharea input{
+   font-size: 32rpx;
+   color: #666; 
+   height: 68rpx;
+}
+
+.searcharea button{
+  width: 150rpx;
+  height: 60rpx;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  margin-top: 10rpx;
+  margin-right: 0rpx;
+  color: #fff;
+  background-color: #268dcd;
+}
+
+.title{
+  padding: 20rpx 40rpx 10rpx 40rpx;
+  font-size: 36rpx;
+  color: #666;
+} 
+
+.elsearea .title{
+  background-color: #fff; 
+}

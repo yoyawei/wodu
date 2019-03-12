@@ -1,0 +1,80 @@
+/* pages/home/project/provide/provide.wxss */
+
+ .title{
+  padding: 20rpx 40rpx 10rpx 40rpx;
+  font-size: 36rpx;
+  color: #666;
+} 
+
+.book{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin: 20rpx;
+  padding: 20rpx;
+}
+
+.bookimg {
+  width: 200rpx;
+  height: 270rpx;
+  border-radius: 5rpx;
+  margin-right: 40rpx;
+  background-color: #eee; 
+}
+
+.bookimg image{
+  width: 200rpx;
+  height: 270rpx;
+  border-radius: 5rpx;
+  margin-bottom: 20rpx;
+}
+
+.bookdes{
+  display: flex;
+  flex-direction: column;
+  font-size: 28rpx;
+  color: #666;
+  line-height: 56rpx;
+}
+
+.booktitle{
+  font-size: 32rpx;
+  color: #333;
+  line-height: 45rpx;
+  margin-bottom: 10rpx;
+}
+
+.readnum{
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #268dcd;
+  margin: 0 10rpx;
+}
+
+.booknum{
+  font-size: 50rpx;
+  color: #333;
+  line-height: 100rpx;
+  margin: 0 15rpx;
+}
+
+.bookbtn{
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+  height: 64rpx;
+  font-size: 30rpx;
+  line-height: 56rpx; 
+  color: #268dcd;
+  background-color: #fff;
+  border: 2rpx solid #268dcd;
+  border-radius: 40rpx;
+}
+
+.line{
+   height: 1rpx; 
+   margin: 0 40rpx;
+   background-color: #dfdfdf; 
+   opacity: 0.7;
+}
+

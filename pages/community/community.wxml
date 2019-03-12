@@ -1,0 +1,43 @@
+<!--pages/community/community.wxml-->
+
+<import src="../template/loadTemp.wxml" />
+<template is="load" data="{{load}}" />
+
+<view class='container' hidden='{{load}}'>
+  <block wx:for='{{posts}}'>
+    <view class='post' hidden='{{!item.isLegal}}'>
+      <view class='avatar'>
+        <image src='{{item.pictureUrl}}' catchtap='toUser' data-userid='{{item.userId}}'></image>
+        <!-- <image class='level' src='/images/level.png'></image> -->
+      </view>
+      <view class='detail'>
+        <view class='name'>
+          <text class='username' catchtap='toUser' data-userid='{{item.userId}}'>{{item.nickName
+}}</text> 评
+          <text class='bookname' catchtap='toBook' data-bookid='{{item.bookId}}'>《{{item.bookName}}》</text>
+        </view>
+        <view class='time'>{{item.pubDate}}</view>
+        <view class='title' catchtap='toComment' data-commentid='{{item.commentId}}'>“{{item.title}}”</view>
+        <view class='content' catchtap='toComment' data-commentid='{{item.commentId}}'>{{item.content}}</view>
+        <image class='postimg' hidden='{{!item.pictures}}' src='{{url + item.pictures}}' mode='aspectFit' catchtap='previewImg' data-http='{{url + item.pictures}}'></image>
+        
+        <view class='actions'>
+          <view bindtap='Star' data-index='{{index}}' data-commentid='{{item.commentId}}'>
+            <image src='/images/icons/star.png'></image>{{item.stars}}
+          </view>
+          <view catchtap='toComment' data-commentid='{{item.commentId}}'>
+            <image src='/images/icons/comment.png'></image>{{item.commentCnt}}
+          </view>
+          <!-- <view catchtap='toReport' data-userid='{{item.userId}}' data-commentid='{{item.commentId}}' data-title='{{item.title}}' data-content='{{item.content}}'>
+            <image src='/images/icons/report.png'></image>举报
+          </view> -->
+        </view>
+      </view>
+    </view>
+  </block>
+  <view class='nomore' hidden='{{!isLoading}}'>没有更多了...</view>
+
+  <view class='addbtn' catchtap='toAdd' hover-class="none">
+    <image src="/images/icons/add.png"></image>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/user/feedback/feedback.wxml-->
+
+<view class='container'>
+  <form class='formarea' bindsubmit='formSubmit'>
+    <view class='formsection'>
+      <input name='title' placeholder='标题'></input>
+    </view>
+    <view class='formsection addimg'>
+      <view class='pclass'>添加截图</view>
+      <image src='{{imgurl}}' mode='aspectFit' bindtap='selectPhoto'></image>
+    </view>
+    <view class='formsection content'>
+      <textarea name='content' placeholder='内容描述（最多200字）' placeholder-class='pclass' maxlength='200'></textarea>
+    </view>
+    <view class='formsection'>
+      <button formType='submit'>反 馈</button>
+    </view>
+  </form>
+</view>
+

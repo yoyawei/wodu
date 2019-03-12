@@ -1,0 +1,22 @@
+<!--pages/user/info/editphone.wxml-->
+
+<view class='container'>
+  <view class='title'>
+    <view class='tip'>更换手机号/账号</view>
+  </view>
+  <form class='formarea' bindsubmit='formSubmit'>
+    <view class='formsection'>
+      <label for='phone'>账号</label>
+      <input name='phone' placeholder='11位手机号' bindinput='getNum' bindblur='checkNum'></input>
+    </view>
+    <view class='formsection code'>
+      <label for='verifycode'>验证码</label>
+      <input name='verifycode' placeholder='请输入验证码'></input>
+      <button catchtap='getCode' plain='{{isplain}}' disabled='{{isdisabled}}'>获取</button>
+    </view>
+    <view class='formsection last'>
+      <button formType='submit'>确认修改</button>
+    </view>
+  </form>
+</view>
+

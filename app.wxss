@@ -1,0 +1,52 @@
+/**app.wxss**/
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}  */
+
+.container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.nomore{
+  margin-top: 30rpx;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 88rpx;
+  color: #999;
+}
+
+.time{
+  font-size: 24rpx;
+  line-height: 2.2em;
+  color: #999;
+  margin-left: 10rpx;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading image {
+  width: 240rpx;
+  height: 240rpx;
+  margin-bottom: 40rpx;
+}
+
+.loading text {
+  color: #268dcd;
+}

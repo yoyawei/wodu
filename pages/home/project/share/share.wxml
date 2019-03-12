@@ -1,0 +1,24 @@
+<!--pages/home/project/share/sharedetail.wxml-->
+
+<view class='container'>
+  <view class='scan'>
+    <text>扫一扫 ISBN 条形码，即可获得图书信息</text>
+    <image src='/images/icons/scan.png' catchtap='toScan'></image>
+  </view>
+  <view class='scanresult'>
+    <view class='stitle'>扫描结果</view>
+    <view class='bookdetail'>
+      <text>isbn: {{detail.bookId}}</text>
+      <text>书名: {{detail.bookName}}</text>
+      <text>作者: {{detail.author}}</text>
+      <text>出版社: {{detail.pubHouse}}</text>
+      <view class='btnwrap'>
+        <button catchtap='toShare' disabled='{{!scaned}}'>YES</button>
+        <button catchtap='Reset' disabled='{{!scaned}}'>NO</button>
+      </view>
+    </view>
+  </view>
+
+  <view class='direct' catchtap='directShare'>直接填写书籍信息点我👈</view>
+
+</view>

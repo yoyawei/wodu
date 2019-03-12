@@ -1,0 +1,6 @@
+/* pages/home/project/share/sharedetail.wxss */
+@import "/pages/home/project/provide/get.wxss";
+
+.formsection label{
+  width: 180rpx;
+}

@@ -1,0 +1,7 @@
+<template name="load">
+  <view class='loading' hidden='{{!load}}'>
+    <!-- <image src='/images/logo.png' mode='aspectFill'>
+    </image> -->
+    <text>加载中...</text>
+  </view>
+</template>

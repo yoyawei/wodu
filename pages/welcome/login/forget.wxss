@@ -1,0 +1,3 @@
+/* pages/welcome/login/forget.wxss */
+@import "/pages/home/project/provide/get.wxss";
+@import "/pages/user/info/editphone.wxss";

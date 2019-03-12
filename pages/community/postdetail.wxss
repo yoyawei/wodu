@@ -1,0 +1,121 @@
+/* pages/community/addComment.wxss */
+@import "/pages/community/community.wxss";
+
+.dcontent{
+  width: 100%;
+  font-size: 30rpx;
+  color: #333;
+  text-indent: 1.2em;
+  line-height: 1.6em;
+  letter-spacing: 1rpx; 
+  word-break:break-all;
+}
+
+.ctitle{
+  height: 58rpx;
+  line-height: 58rpx;
+  font-size: 28rpx;
+  padding-left: 20rpx;
+  background-color: #f2f2f2;
+  color: #666;
+}
+
+.comments{
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  margin-bottom: 120rpx;
+}
+
+.comment{
+  display: flex;
+  flex-direction: row;
+}
+
+.cavatar image{
+  width: 68rpx;
+  height: 68rpx;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  margin-right: 20rpx;
+}
+
+.cdetail{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  border-bottom: 1rpx solid #e5e5e5;
+  padding-bottom: 20rpx;
+}
+
+.cinfo{
+  position: relative;
+  font-size: 26rpx;
+  line-height: 2em;
+  color: #666;
+}
+
+.cname{
+  color: #268dcd;
+}
+
+.ctime{
+  font-size: 22rpx;
+  line-height: 2.2em;
+  color: #999;
+}
+
+.ccontent{
+  font-size: 28rpx;
+  color: #333;
+  line-height: 1.6em; 
+  word-break:break-all;
+}
+
+.rbcomments{
+  background-color: #f8f8f8;
+  margin-top: 10rpx;
+  padding-left: 20rpx;
+  padding-bottom: 10rpx; 
+}
+
+.report{
+  position: absolute;
+  top: 5rpx;
+  right: 10rpx;
+  color: #999;
+}
+
+.report image{
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.textwrap{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  padding-left: 30rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #e5e5e5;
+}
+
+.textwrap textarea{
+  min-height: 80rpx; 
+  max-height: 160rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+  line-height: 45rpx;
+  color: #333;
+  background-color: #fff;
+  border-bottom: 1rpx solid #268dcd;
+}
+
+.textbtn{
+  font-size: 30rpx;
+  color: #268dcd;
+  margin-top: 20rpx;
+}

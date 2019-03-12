@@ -1,0 +1,31 @@
+<!--pages/user/status/status.wxml-->
+
+<import src="../../template/loadTemp.wxml" />
+<template is="load" data="{{load}}" />
+
+<view class='container'>
+  <view class='books'>
+    <block wx:for='{{books}}'>
+      <view class='bookitem'>
+        <view class='book'>
+          <view class='bookimg'>
+            <image src='{{url + item.rbBook.bookImg}}' mode='aspectFill'  catchtap='toBook' data-bookid='{{item.bookId}}'></image>
+          </view>
+          <view class='detail'>
+            <view class='ing'>{{states[item.state]}}</view>
+            <view class='time'>{{item.takenDate}} 借</view>
+            <view class='bookname'  catchtap='toBook' data-bookid='{{item.bookId}}'>{{item.rbBook.name}}</view>
+            <!-- <view class='time' hidden='{{item.state == 5}}'>{{item.deadline}}应还</view> -->
+            <view class='time' hidden='{{item.state != 5}}'>{{item.returnDate}} 已还</view>
+          </view>
+        </view>
+        <view class='bookaction'>
+          <view bindtap='cancelOrder' data-bstatus='{{item.state}}' data-bookid='{{item.bookId}}' data-userid='{{item.userId}}' data-reid='{{item.reservationId}}'>取消预约</view>
+          <view bindtap='toReturn' data-bstatus='{{item.state}}' data-userid='{{item.userId}}' data-reid='{{item.reservationId}}' data-bname='{{item.rbBook.name}}'>还书</view>
+          <view  bindtap='toPost' data-bookid='{{item.bookId}}' data-bookname='{{item.rbBook.name}}'>写书评</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class='nomore' hidden='{{!isLoading}}'>没有更多了...</view>
+</view>

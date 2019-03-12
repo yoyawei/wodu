@@ -1,0 +1,46 @@
+/* pages/home/data/ranking/ranking.wxss */
+
+.books-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 20rpx;
+}
+
+.book-item {
+  flex: 1;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20rpx 18rpx;
+}
+
+.book-img {
+  width: 200rpx;
+  height: 270rpx;
+  margin-bottom: 20rpx;
+  background-color: #aaa;
+}
+
+.book-name {
+  margin-bottom: 16rpx;
+  font-size: 30rpx;
+  color: #333;
+  text-align: center;
+}
+
+.book-author {
+  margin-bottom: 16rpx;
+  font-size: 28rpx;
+  color: #666;
+  text-align: center;
+}
+
+.tip{
+  font-size: 28rpx;
+  line-height: 2em;
+  color: #999;
+  text-align: center;
+  margin-bottom: 20rpx;
+}

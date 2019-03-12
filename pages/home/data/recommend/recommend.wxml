@@ -1,0 +1,21 @@
+<!--pages/home/data/recommend/recommend.wxml-->
+
+<import src="../../../template/loadTemp.wxml"/>
+<template is="load" data="{{load}}"/>
+
+<view class='container'>
+  <block wx:for='{{books}}'>
+    <view class='book-item'>
+      <view class='title'>
+        <text>{{item.title}}</text>
+      </view>
+      <view class='content'>
+        <image class='bookimg' src='{{url + item.picture}}' mode='aspectFill'></image>
+        <view class='detail'>
+          <text class='subtitle'>简介</text>
+          <text class='des'>{{item.description}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

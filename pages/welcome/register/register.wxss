@@ -1,0 +1,38 @@
+@import "/pages/home/project/provide/get.wxss";
+
+.ftitle{
+  font-size: 34rpx;
+  color: #333;
+  text-align: center;
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+}
+
+.ftip{
+  font-size: 28rpx;
+  color: #ff0000;
+}
+
+.last{
+  border-bottom: none;
+}
+
+.code{
+  position: relative;
+}
+
+.code button{
+  position: absolute;
+  right: 10rpx;
+  width: 120rpx;
+  height: 58rpx;
+  font-size: 28rpx;
+  line-height: 56rpx;
+  background-color: #268dcd;
+}
+
+.last button{
+  width: 280rpx;
+  margin-top: 50rpx;
+  background-color: #268dcd;
+}

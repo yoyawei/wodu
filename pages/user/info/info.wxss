@@ -1,0 +1,74 @@
+/* pages/user/info/info.wxss */
+
+.container{
+  color: #333;
+  background-color: #f2f2f2;
+}
+
+.toedit{
+  height: 88rpx;
+  font-size: 32rpx;
+  line-height: 88rpx;
+  background-color: #fff;
+  margin: 30rpx 0;
+  padding: 0 30rpx;
+}
+
+.infos{
+  background-color: #fff;
+  padding: 0 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.info{
+  position: relative;
+  font-size: 30rpx;
+  line-height: 88rpx;
+  height: 88rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  display: flex;
+}
+
+.infotitle{
+  width:120rpx;
+  color: #666;
+  margin-right: 20rpx;
+}
+
+.infodetail{
+  color: #333;
+}
+
+.info image{
+  position: absolute;
+  right: -10rpx;
+  width: 30rpx;
+  height: 30rpx;
+  margin: 28rpx 30rpx; 
+  vertical-align: middle;
+}
+
+.logout{
+  background-color: #fff;
+  color: #333;
+  font-size: 34rpx;
+  line-height: 88rpx;
+  text-align: center;
+  border: 1rpx solid #e5e5e5;
+  border-radius: 10rpx;
+  margin: 30rpx 40rpx 70rpx 40rpx;
+}
+
+.title{
+  padding: 30rpx 40rpx 15rpx 40rpx;
+  font-size: 36rpx;
+  color: #333;
+  line-height: 72rpx;
+  background-color: #f2f2f2; 
+}
+
+.tip{
+  font-size: 28rpx;
+  color: #666;
+  margin-left: 15rpx;
+}

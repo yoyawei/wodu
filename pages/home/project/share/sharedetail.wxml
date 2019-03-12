@@ -1,0 +1,66 @@
+<!--pages/home/project/share/sharedetail.wxml-->
+
+<view class='container'>
+  <view class='title'>
+    <view class='tip'>分享你的书籍到平台，可以借给他人阅读</view>
+  </view>
+  <form class='formarea' bindsubmit='formSubmit'>
+    <view class='formsection'>
+      <label for='isbn'>ISBN</label>
+      <input name='isbn' placeholder='请输入ISBN码' value='{{isbn}}'></input>
+    </view>
+    <view class='formsection'>
+      <label for='bookName'>书名</label>
+      <input name='bookName' placeholder='请输入书名' value='{{bookname}}'></input>
+    </view>
+    <view class='formsection'>
+      <label for='author'>作者</label>
+      <input name='author' placeholder='请输入图书作者' value='{{author}}'></input>
+    </view>
+    <view class='formsection'>
+      <label for='pubHouse'>出版社</label>
+      <input name='pubHouse' placeholder='请输入图书出版社' value='{{pub}}'></input>
+    </view>
+    <view class='formsection' >
+      <label for='delieverWay'>交接方式</label>
+      <radio-group name="delieverWay" bindchange="radioChange">
+        <label><radio value="0"  color="#268dcd"/>自送</label>
+        <label><radio value="1"  color="#268dcd"/>等收</label>
+      </radio-group>
+    </view> 
+    <block wx:if='{{delieverWay==0?0:1}}'>
+    <view class='formsection'>
+      <label for='location'>收书地址</label>
+      <input name='location' placeholder='最好为宿舍地址'></input>
+    </view>
+    </block>
+    <block wx:else>
+    <view class="formsection">
+      <picker mode="date" value="{{date}}" start="{{sTime}}" end="2019-1-1" bindchange="bindDateChange">
+        <view class="picker">
+          <label>日 期 </label>
+          <label>{{date}}</label>
+        </view>
+      </picker>
+    </view>
+    <view class="formsection">
+      <picker mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{slot}}" range-key="{{'slotTime'}}">
+        <view class="picker">
+          <label>时 间 </label>
+          <label>{{slottime}}</label>
+        </view>
+      </picker>
+    </view>
+    </block>
+    <view class='formsection'>
+      <label for='phone'>手机号</label>
+      <input name='phone' placeholder='请输入手机号'></input>
+    </view> 
+    <view class='info'>
+      <view>地点： 学生活动中心307</view>
+    </view>
+    <view class='formsection'>
+      <button formType='submit'>确认分享</button>
+    </view>
+  </form>
+</view>

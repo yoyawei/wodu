@@ -1,0 +1,37 @@
+<!--pages/user/history/history.wxml-->
+
+<import src="../../template/loadTemp.wxml" />
+<template is="load" data="{{load}}" />
+
+
+<view class='container'>
+  <block wx:for='{{posts}}'>
+      <view class='post' hidden='{{!item.isLegal}}'>
+        <view class='avatar'>
+          <image src='{{item.pictureUrl}}'></image>
+          <!-- <image class='level' src='/images/level.png'></image> -->
+        </view>
+        <view class='detail'>
+          <view class='name'>
+            评
+            <text class='bookname' catchtap='toBook' data-bookid='{{item.bookId}}'>《{{item.bookName}}》</text>
+          </view>
+          <view class='time'>{{item.pubDate}}</view>
+          <view class='title' catchtap='toComment' data-commentid='{{item.commentId}}'>“{{item.title}}”</view>
+          <view class='content' catchtap='toComment' data-commentid='{{item.commentId}}'>{{item.content}}</view>
+          <image class='postimg' hidden='{{!item.pictures}}' src='{{url + item.pictures}}' mode='aspectFit' catchtap='previewImg' data-http='{{url + item.pictures}}'></image>
+
+          <view class='actions'>
+            <view>
+              <image src='/images/icons/star.png'></image>{{item.stars}}
+            </view>
+            <view catchtap='toComment' data-commentid='{{item.commentId}}'>
+              <image src='/images/icons/comment.png'></image>{{item.commentCnt}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  <view class='nomore' hidden='{{!isLoading}}'>没有更多了...</view>
+</view>
+

@@ -1,0 +1,24 @@
+<!--pages/home/data/comment/comment.wxml-->
+
+<import src="../../../template/loadTemp.wxml"/>
+<template is="load" data="{{load}}"/>
+
+<view class='container'>
+  <block wx:for='{{results}}'>
+    <view class='comment'>
+      <view class='comment-item'>
+         <!-- <image class='avater' src='{{url + item.bookImg}}' mode='aspectFill'></image>  -->
+        <view class='content'>
+          <text class='name'>{{item.postAuthor}}</text>
+          <view class='detail'>
+            <text class='title'>《{{item.postBookName}}》</text>
+            <text>{{item.postContent}}</text>
+          </view>
+          <text class='time'>{{item.postTime}}</text>
+        </view>
+      </view>
+      <view class='line'></view> 
+    </view>
+  </block>
+  <view class='nomore' hidden='{{!isLoading}}'>没有更多了...</view>
+</view>

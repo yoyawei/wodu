@@ -1,0 +1,18 @@
+<!--pages/message/notice.wxml-->
+
+<import src="../template/loadTemp.wxml"/>
+<template is="load" data="{{load}}"/>
+
+<view class='container'>
+  <view class='notices'>
+
+    <block wx:for='{{messages}}'>
+      <view class='nconent' bindtap='todetail' data-messageid='{{item.messageId}}' data-messagetype='{{item.messageType}}'>
+        <view class='ntype'>{{types[item.messageType]}}</view>
+        <view class='ndetail'>{{item.content}}</view>
+        <view class='time'>{{item.date}}</view>
+      </view>
+    </block>
+
+  </view>
+</view>

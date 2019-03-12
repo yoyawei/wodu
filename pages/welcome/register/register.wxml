@@ -1,0 +1,38 @@
+<!--pages/login/register.wxml-->
+<view class='container'>
+  <view class='title'>为保证您使用平台的有效性，请认真填写注册信息</view>
+  <form class='formarea' bindsubmit='formSubmit'>
+    <view class='ftitle'>填写注册信息</view>
+    <view class='formsection'>
+      <label for='stuName'>姓名</label>
+      <input name='stuName' placeholder='请输入您的姓名'></input>
+    </view>
+    <view class='formsection'>
+      <label for='stuNum'>学号</label>
+      <input name='stuNum' placeholder='请输入您的学号'></input>
+    </view>
+    <view class='formsection'>
+      <label for='phone'>账号</label>
+      <input name='phone' placeholder='11位手机号' bindinput='getNum' bindblur='checkNum'></input>
+    </view>
+    <view class='formsection'>
+      <label for='sex'>性别</label>
+      <radio-group name="sex">
+        <label><radio value="0"  color="#268dcd"/>男</label>
+        <label><radio value="1"  color="#268dcd"/>女</label>
+      </radio-group>
+    </view>    
+    <view class='formsection'>
+      <label for='password'>密码</label>
+      <input password='true' name='password' placeholder='6-20位字母及数字'></input>
+    </view>
+    <view class='formsection code'>
+      <label for='verifycode'>验证码</label>
+      <input name='verifycode' placeholder='请输入验证码'></input>
+      <button catchtap='getCode' disabled='{{isdisabled}}'>获取</button>
+    </view>
+    <view class='formsection last'> 
+       <button formType='submit'>注 册</button>  
+    </view>
+  </form>
+</view>

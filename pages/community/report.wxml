@@ -1,0 +1,22 @@
+<!--pages/community/report.wxml-->
+
+<import src="../template/loadTemp.wxml" />
+<template is="load" data="{{load}}" />
+
+<view class='container'>
+  <view class='title'>
+    <view hidden='{{type==1}}'>举报书评 {{title}}</view>
+    <view hidden='{{type==0}}'>举报评论</view>
+    <view class='tip'>{{content}}</view>
+  </view>
+  <form class='formarea' bindsubmit='formSubmit'>
+
+    <view class='formsection content'>
+      <textarea name='rdetail' placeholder='举报原因（最多300字）' placeholder-class='pclass' maxlength='300'></textarea>
+    </view>
+
+    <view class='formsection'>
+      <button formType='submit'>举报</button>
+    </view>
+  </form>
+</view>

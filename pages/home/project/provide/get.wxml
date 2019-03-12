@@ -1,0 +1,48 @@
+<!--pages/home/project/provide/get.wxml-->
+
+<view class='container'>
+  <view class='title'>
+    <view>《{{bookname}}》</view>
+    <view class='tip'>请选择预约取书时间</view>
+    <view class='tip'>注意：平台暂时只接受周五规定时间段领书</view>
+  </view>
+  <form class='formarea' bindsubmit='formSubmit'>
+
+    <view class="formsection">
+      <picker mode="date" value="{{date}}" start="{{sTime}}" end="2019-1-1" bindchange="bindDateChange">
+        <view class="picker">
+          <label>日 期 </label>
+          <label>{{date}}</label>
+        </view>
+      </picker>
+    </view>
+
+    <view class="formsection">
+      <picker mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{slot}}" range-key="{{'slotTime'}}">
+        <view class="picker">
+          <label>时 间 </label>
+          <label>{{slottime}}</label>
+        </view>
+      </picker>
+    </view>
+
+    <view class='formsection'>
+      <label for='phone'>手 机</label>
+      <input name='phone'></input>
+    </view>
+
+    <view class='info'>
+      <view>取书地点： 学生活动中心307</view>
+    </view>
+    <view class='formsection'>
+      <button formType='submit'>确认预约</button>
+    </view>
+  </form>
+  <view class='title alast' hidden='{{agreed}}'>
+    <import src="../../../template/loadTemp.wxml" />
+    <template is="load" data="{{load}}" />
+    <view>用户协议</view>
+    <view class='tip'>{{agreement}}</view>
+    <view class='agree' bindtap='agree'>本人已阅读，同意</view>
+  </view>
+</view>

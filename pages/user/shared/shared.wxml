@@ -1,0 +1,29 @@
+<!--pages/home/project/share/share.wxml-->
+
+<import src="../../template/loadTemp.wxml" />
+<template is="load" data="{{load}}" />
+
+<view class='container'>
+  <view class='books'>
+    <block wx:for='{{books}}'>
+      <view class='bookitem'>
+        <view class='book'>
+          <view class='detail'>
+            <view class='ing'>{{states[item.state]}}</view>
+            <view class='time'>{{item.proposedDate}} 分享</view>
+            <view class='bookname'>《{{item.bookName}}》 作者：{{item.author
+}}</view>
+            <view class='time'> 交接方式：  
+              <text wx:if='{{item.delieverWay==0?1:0}}'>自送</text>
+              <text wx:else >等收</text>
+            </view>
+          </view>
+        </view>
+        <view class='bookaction'>
+          <view bindtap='cancelOrder' data-bstatus='{{item.state}}' data-bookid='{{item.bookId}}' data-userid='{{item.userId}}' data-sid='{{item.shareId}}'>取消分享</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class='nomore' hidden='{{!isLoading}}'>没有更多了...</view>
+</view>

@@ -1,0 +1,29 @@
+/* pages/message/noticedetail.wxss */
+@import "/pages/message/notice.wxss";
+
+.container{
+    background-color: #fff;
+    padding: 30rpx;
+}
+
+.wrap{
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+  border-radius: 10rpx;
+}
+
+.ntype{
+  color: #268dcd;
+}
+
+.ndetails{
+  font-size: 30rpx;
+  line-height: 1.8em;
+  color: #333;
+  margin: 20rpx 10rpx 30rpx 10rpx;
+}
+
+.canlink{
+  color: #268dcd;
+}

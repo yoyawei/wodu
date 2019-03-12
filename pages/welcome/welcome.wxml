@@ -1,0 +1,23 @@
+<!--pages/welcome/welcome.wxml-->
+
+<view class='container'>
+  <view class='motto'>
+  <view class='big'>我 读</view>
+  <view>读书，是一群人的狂欢 。</view>
+  </view>
+
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+  <view class='tohome' catchtap='toHome'>到主页随便逛逛👈  </view>
+
+  <view class='login'>
+    <button bindtap='tologintap' disabled='{{!hasUserInfo}}'>登 录</button>
+    <button bindtap='toregistertap' disabled='{{!hasUserInfo}}'>注 册</button>
+  </view>
+</view>

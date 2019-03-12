@@ -1,0 +1,21 @@
+<!--pages/user/info/editpwd.wxml-->
+
+<view class='container'>
+  <view class='title'>
+    <view class='tip'>修改密码</view>
+  </view>
+  <form class='formarea' bindsubmit='formSubmit'>
+    <view class='formsection'>
+      <label for='password'>密码</label>
+      <input name='password' placeholder='6-20位字母及数字' password='true'></input>
+    </view>
+    <view class='formsection code'>
+      <label for='repwd'>确认</label>
+      <input name='repwd' placeholder='请再次输入密码' password='true'></input>
+    </view>
+    <view class='formsection last'>
+      <button formType='submit'>修改</button>
+    </view>
+  </form>
+</view>
+

@@ -1,0 +1,64 @@
+/* pages/home/project/share/share.wxss */
+@import "/pages/home/project/provide/get.wxss";
+
+.scan{
+  padding-top: 40rpx;
+  margin: 0 60rpx;
+  font-size: 30rpx;
+  color: #333;
+  text-align: center;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.scan image{
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.scanresult{
+  padding: 50rpx;
+}
+
+.stitle{
+  margin-bottom: 10rpx;
+  margin-left: 5rpx;
+  font-size: 32rpx;
+  line-height: 2em;
+  color: #666;
+}
+
+.bookdetail{
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 30rpx 10rpx 30rpx;
+  font-size: 30rpx;
+  line-height: 1.8em;
+  color: #333;
+  border: 2rpx solid #e5e5e5;
+  border-radius: 10rpx;
+}
+
+.btnwrap{
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx 40rpx;
+}
+
+.btnwrap button{
+  width: 200rpx;
+  height: 80rpx;
+  margin-top: 10rpx;
+  font-size: 40rpx;
+  line-height: 80rpx;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #268dcd;
+}
+
+.direct{
+  margin: 40rpx;
+  font-size: 30rpx;
+  line-height: 1.8em;
+  color: #268dcd;
+  text-align: center;
+}

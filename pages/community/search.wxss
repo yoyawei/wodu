@@ -1,0 +1,9 @@
+/* pages/community/search.wxss */
+
+@import "../home/project/provide/provide.wxss";
+@import "../home/project/want/want.wxss"
+
+.book{
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}

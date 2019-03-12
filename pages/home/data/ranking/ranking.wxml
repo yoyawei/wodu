@@ -1,0 +1,17 @@
+<!--pages/home/data/ranking/ranking.wxml-->
+
+<import src="../../../template/loadTemp.wxml"/>
+<template is="load" data="{{load}}"/>
+
+<view class='container'>
+  <view class='books-container'>
+    <block wx:for='{{books}}'>
+      <view class='book-item' catchtap='toBook' data-bookid='{{item.isbn}}'>
+        <image class='book-img' src='{{url + item.bookImg}}' mode='aspectFill'></image>
+        <text class='book-name'>{{item.name}}</text>
+        <text class='book-author'>{{item.author}}</text>
+      </view>
+    </block>
+  </view>
+  <view class='tip'>- 数据来源：平台书籍借阅量 -</view>
+</view>

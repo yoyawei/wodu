@@ -1,0 +1,79 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/welcome/welcome",
+    "pages/welcome/login/login",
+    "pages/welcome/register/register",
+    "pages/user/user",
+    "pages/community/community",
+    "pages/community/addpost",
+    "pages/community/postdetail",
+    "pages/community/report",
+    "pages/community/userstate",
+    "pages/home/project/provide/provide",
+    "pages/home/project/provide/get",
+    "pages/home/project/share/share",
+    "pages/home/project/share/sharedetail",
+    "pages/home/project/want/want",
+    "pages/home/data/recommend/recommend",
+    "pages/home/data/ranking/ranking",
+    "pages/home/data/comment/comment",
+    "pages/home/activity/meeting/meeting",
+    "pages/home/activity/vote/vote",
+    "pages/home/activity/wish/wish",
+    "pages/home/activity/ad/ad",
+    "pages/user/info/info",
+    "pages/user/info/editinfo",
+    "pages/user/info/editphone",
+    "pages/user/status/status",
+    "pages/user/shared/shared",
+    "pages/user/help/help",
+    "pages/user/feedback/feedback",
+    "pages/home/project/provide/bookdetail",
+    "pages/user/status/return",
+    "pages/user/info/editpwd",
+    "pages/user/history/history",
+    "pages/welcome/login/forget",
+    "pages/message/message",
+    "pages/message/notice",
+    "pages/message/noticedetail",
+    "pages/community/search",
+    "pages/user/follow/follow"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#268dcd",
+    "navigationBarTitleText": "Home",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/community/community",
+        "text": "社区",
+        "iconPath": "images/icons/community.png",
+        "selectedIconPath": "images/icons/community-on.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "发现",
+        "iconPath": "images/icons/home.png",
+        "selectedIconPath": "images/icons/home-on.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "images/icons/message.png",
+        "selectedIconPath": "images/icons/message-on.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/icons/user.png",
+        "selectedIconPath": "images/icons/user-on.png"
+      }
+    ],
+    "color": "#666",
+    "selectedColor": "#268dcd"
+  }
+}

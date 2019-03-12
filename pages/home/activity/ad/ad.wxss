@@ -1,0 +1,7 @@
+/* pages/home/activity/ad/ad.wxss */
+
+.tip{
+  font-size: 32rpx;
+  color: #333;
+  padding: 40rpx;
+}

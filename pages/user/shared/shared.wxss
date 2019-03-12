@@ -1,0 +1,2 @@
+/* pages/home/project/share/share.wxss */
+@import '../status/status.wxss';

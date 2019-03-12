@@ -1,0 +1,3 @@
+/* pages/community/addnew.wxss */
+@import "/pages/home/project/provide/get.wxss";
+@import "/pages/user/feedback/feedback.wxss";

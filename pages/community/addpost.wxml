@@ -1,0 +1,27 @@
+<!--pages/community/addnew.wxml-->
+
+<import src="../template/loadTemp.wxml" />
+<template is="load" data="{{load}}" />
+
+<view class='container'>
+  <view class='title'>
+    <view>评《{{bookname}}》</view>
+  </view>
+  <form class='formarea' bindsubmit='formSubmit'>
+    <view class='formsection'>
+      <input name='title' placeholder='书评标题'></input>
+    </view>
+    <view class='formsection content'>
+      <textarea name='content' placeholder='书评内容...' placeholder-class='pclass' maxlength='-1'></textarea>
+    </view>
+
+    <view class='formsection addimg'>
+      <view class='pclass'>添加图片</view>
+      <image src='{{imgurl}}' mode='aspectFit' bindtap='selectPhoto'></image>
+    </view>
+
+    <view class='formsection'>
+      <button formType='submit'>发表书评</button>
+    </view>
+  </form>
+</view>

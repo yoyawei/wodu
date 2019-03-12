@@ -1,0 +1,69 @@
+/* pages/user/user.wxss */
+
+.wel{
+  height: 100vh;
+}
+
+.welbtn{
+  width: 250rpx;
+  height: 88rpx;
+  font-size: 32rpx;
+  line-height: 80rpx; 
+  color: #268dcd;
+  background-color: #fff;
+  margin-top: 150rpx;
+}
+
+.user{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #268dcd;
+}
+
+.avatar {
+  width: 140rpx;
+  height: 140rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  border: 2rpx solid #fff;
+}
+
+.nickname {
+  color: #fff;
+  margin-bottom: 40rpx;
+}
+
+.user button{
+  height: 88rpx;
+  font-size: 30rpx;
+  line-height: 80rpx; 
+  color: #268dcd;
+  background-color: #fff;
+  margin-bottom: 50rpx;
+}
+
+.detail{
+  display: flex;
+  flex-direction: column;
+}
+
+.detailitem{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 96rpx;
+  border-bottom: 0.5rpx solid #dfdfdf;
+}
+
+.detailitem image{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 28rpx 30rpx; 
+  vertical-align: middle;
+}
+
+.detail text{
+  font-size: 34rpx;
+  color: #666;
+}

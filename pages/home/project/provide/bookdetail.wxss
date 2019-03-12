@@ -1,0 +1,125 @@
+/* pages/home/project/provide/bookdetail.wxss */
+
+.info {
+  padding: 0 60rpx 30rpx 60rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.bookimg {
+  width: 100%;
+  height: 360rpx;
+  padding-top: 30rpx;
+  text-align: center;
+}
+
+.bookimg image {
+  height: 324rpx;
+}
+
+.bookname {
+  font-size: 34rpx;
+  line-height: 2em;
+  color: #333;
+}
+
+.detailwrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 28rpx;
+  line-height: 1.5em;
+  color: #666;
+}
+
+.bookdetail {
+  display: flex;
+  flex-direction: column;
+}
+
+.bookcnt{
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx 40rpx;
+  border: 2rpx solid #e5e5e5;
+  text-align: center;
+}
+
+.count {
+  font-size: 50rpx;
+  line-height: 2em;
+  color: #333;
+}
+
+.des {
+  padding: 30rpx 60rpx;
+  border-top: 1rpx solid #e5e5e5;
+}
+
+.booktitle {
+  font-size: 32rpx;
+  line-height: 2em;
+  color: #333;
+}
+
+.bookcontent {
+  font-size: 30rpx;
+  line-height: 1.6em;
+  letter-spacing: 1rpx; 
+  color: #666;
+}
+
+.posts {
+  padding: 30rpx 60rpx;
+  margin-bottom: 50rpx;
+}
+
+.postitem{
+  border-bottom: 1rpx solid #e5e5e5;
+  padding: 30rpx 0;
+}
+
+.userinfo{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10rpx;
+  font-size: 30rpx;
+  line-height: 68rpx;
+  color: #666;
+}
+
+.userinfo image{
+  width: 68rpx;
+  height:68rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+
+.content{
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  line-height: 1.6em;
+  letter-spacing: 1rpx; 
+  color: #333;
+}
+
+.bookbtn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.btnitem {
+  flex: 1;
+  height: 80rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  color: #ffffff;
+  background-color: #268dcd;
+  text-align: center;
+}
+
+.first{
+  border-right: 1rpx solid #ffffff;
+}

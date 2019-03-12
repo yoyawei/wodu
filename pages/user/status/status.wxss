@@ -1,0 +1,78 @@
+/* pages/user/status/status.wxss */
+
+.tip{
+  font-size: 32rpx;
+  color: #333;
+  padding: 40rpx;
+}
+
+.books{ 
+  padding: 30rpx 20rpx;
+}
+
+.bookitem{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30rpx;
+  border: 1rpx solid #e5e5e5;
+  border-right: 10rpx solid #268dcd; 
+  border-radius: 12rpx;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.book{
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+}
+
+.bookimg image{
+  width: 150rpx;
+  height: 200rpx;
+  margin-right: 20rpx;
+  background-color: #999;
+}
+
+.detail{
+  display: flex;
+  flex-direction: column;
+}
+
+.ing{
+  font-size: 36rpx;
+  color: #268dcd;
+  position: absolute;
+  top: 20rpx;
+  right: 30rpx;
+}
+
+.bookname{
+  font-size: 30rpx;
+  line-height: 70rpx;
+  color: #333;
+}
+
+.time{
+  font-size: 28rpx;
+  line-height: 56rpx;
+  color: #666;
+}
+
+.bookaction{
+  display: flex;
+  flex-direction: row;
+  border-top: 1rpx solid #e5e5e5;
+}
+
+.bookaction view{
+  flex: 1;
+  height: 68srpx;
+  margin: 10rpx 0rpx; 
+  line-height: 68rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #666;
+  background-color: #fff;
+  border-right: 1rpx solid #e5e5e5;
+}

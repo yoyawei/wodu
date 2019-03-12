@@ -1,0 +1,32 @@
+<!--pages/home/project/want/want.wxml-->
+<view class='container'>
+  <form bindsubmit='formSubmit'>
+    <view class='searcharea'>
+      <label for='key'>🔍</label>
+      <input name='key' placeholder='书名/作者/出版社' focus='true'></input>
+      <button formType='submit'>搜索</button>
+    </view>
+  </form>
+  <view>
+    <view class='title'>请先找到想要评论的书籍哟</view>
+    <block wx:for='{{results}}'>
+    <view>
+      <view class='line'></view>
+      <view class='book'>
+        <view class='bookimg'>
+          <image src='{{url + item.bookImg}}' mode='aspectFill' catchtap='toBook' data-bookid='{{item.isbn}}'></image>
+        </view>
+        <view class='bookdes' catchtap='toBook' data-bookid='{{item.isbn}}'>
+          <text class='booktitle'>{{item.name}}</text>
+          <text>{{item.author}}</text>
+          <text>{{item.pubHouse}}</text>
+            <button class='bookbtn' catchtap='toPost' data-bookid='{{item.isbn}}' data-bookname='{{item.name}}' plain='{{!item.stock}}' disabled='{{!item.stock}}'>发表书评</button>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class='elsearea' hidden='{{isnothing}}'>
+      <view class='title'>抱歉！暂无该图书。</view>
+    </view>
+  </view>
+</view>

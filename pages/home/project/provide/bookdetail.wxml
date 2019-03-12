@@ -1,0 +1,50 @@
+<!--pages/home/project/provide/bookdetail.wxml-->
+
+<import src="../../../template/loadTemp.wxml" />
+<template is="load" data="{{load}}" />
+
+<view class='container'>
+  <view class='info'>
+    <view class='bookimg'>
+      <image src='{{url + book.bookImg}}' mode='aspectFit'></image>
+    </view>
+    <view class='bookname'>{{book.name}}</view>
+    <view class='detailwrap'>
+      <view class='bookdetail'>
+        <text>作者： {{book.author}}</text>
+        <text>出版社： {{book.pubHouse}}</text>
+        <text>ISBN： {{book.isbn}}</text>
+        <text>来源： {{book.provider}}</text>
+        <text>借阅量： {{book.readCnt}}</text>
+      </view>
+      <view class='bookcnt'>
+        <text>剩余</text>
+        <text class='count'>{{book.stock}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='des'>
+    <view class='booktitle'>简介</view>
+    <view class='bookcontent'>{{book.description}}</view>
+  </view>
+
+  <view class='posts'>
+    <view class='booktitle'>相关书评</view>
+    <block wx:for='{{posts}}'>
+      <view class='postitem'>
+        <view class='userinfo' catchtap='toUser' data-userid='{{item.userId}}'>
+          <image src='{{item.pictureUrl}}'></image>
+          <text>{{item.nickName}}</text>
+        </view>
+        <view class='time'>{{item.pubDate}}</view>
+        <view class='content' catchtap='toComment' data-commentid='{{item.commentId}}'>{{item.content}}</view>
+      </view>
+    </block>
+  </view>
+
+  <view class='bookbtn'>
+    <view class='btnitem first' catchtap='toAdd' data-bookid='{{book.isbn}}' data-bookname='{{book.name}}'>写书评</view>
+    <view class='btnitem' catchtap='toGet' data-bookid='{{book.isbn}}' data-bookname='{{book.name}}'>预约借阅</view>
+  </view>
+</view>

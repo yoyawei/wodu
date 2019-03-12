@@ -1,0 +1,36 @@
+<!--pages/user/status/return.wxml-->
+
+<view class='container'>
+  <view class='title'>
+    <view>《{{bookname}}》</view>
+    <view class='tip'>请选择预约还书时间</view>
+    <view class='tip'>注意：平台暂时只接受周五规定时间段还书</view>
+  </view>
+  <form class='formarea' bindsubmit='formSubmit'>
+
+    <view class="formsection">
+      <picker mode="date" value="{{date}}" start="{{sTime}}" end="2019-1-1" bindchange="bindDateChange">
+        <view class="picker">
+          <label>日 期 </label>
+          <label>{{date}}</label>
+        </view>
+      </picker>
+    </view>
+
+    <view class="formsection">
+      <picker mode="selector" bindchange="bindPickerChange" value="{{index}}" range="{{slot}}" range-key="{{'slotTime'}}">
+        <view class="picker">
+          <label>时 间 </label>
+          <label>{{slottime}}</label>
+        </view>
+      </picker>
+    </view>
+    <view class='info'>
+      <view>还书地点： 学生活动中心307</view>
+    </view>
+    <view class='formsection'>
+      <button formType='submit'>还 书</button>
+    </view>
+  </form>
+</view>
+

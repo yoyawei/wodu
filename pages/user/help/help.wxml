@@ -1,0 +1,16 @@
+<!--pages/user/help/help.wxml-->
+
+<view class='container'>
+  <block wx:for='{{qas}}'>
+ <view class='qa '>
+  <view class='question '>
+    <text class='up '>Q</text>
+    <text>{{item.question}}</text>
+  </view>
+  <view class='answer '>
+    <text class='up '>A</text>
+    <text>{{item.answer}}</text>
+  </view>
+ </view>
+ </block>
+</view>

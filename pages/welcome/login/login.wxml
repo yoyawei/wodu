@@ -1,0 +1,23 @@
+<!--pages/login/login.wxml-->
+<!--pages/home/project/share/sharedetail.wxml-->
+
+<view class='container'>
+  <view class='ftitle'>登 录</view>
+  <form class='formarea' bindsubmit='formSubmit'>
+    <view class='formsection'>
+      <label for='phone'>账号</label>
+      <input name='phone' placeholder='手机号'></input>
+    </view>
+    <view class='formsection'>
+      <label for='password'>密码</label>
+      <input name='password' placeholder='密码' password='true'></input>
+    </view>
+    <view class='formsection last'> 
+      <button formType='submit'>登 录</button>   
+    </view>
+  </form>
+  <view class='toarea'>
+    <navigator url='../register/register' hover-class='none'>还没有账号？来注册吧！</navigator>
+    <navigator url='forget' hover-class='none'>忘记密码TAT</navigator>
+  </view>
+</view>

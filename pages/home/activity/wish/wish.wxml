@@ -1,0 +1,29 @@
+<!--pages/home/activity/wish/wish.wxml-->
+
+<view class='container'>
+  <view class='title'>
+    <view class='tip'>写下你的愿望书单，有可能在平台出现哟~</view>
+  </view>
+  <form class='formarea' bindsubmit='formSubmit'>
+    <view class='formsection'>
+      <label for='bookName'>书名</label>
+      <input name='bookName' placeholder='请输入书名'></input>
+    </view>
+    <view class='formsection'>
+      <label for='author'>作者</label>
+      <input name='author' placeholder='请输入图书作者'></input>
+    </view>
+    <view class='formsection'>
+      <label for='pubHouse'>出版社</label>
+      <input name='pubHouse' placeholder='请输入图书出版社'></input>
+    </view>
+    <view class='formsection content'>
+      <textarea name='reason' placeholder='理由（最多200字）' placeholder-class='pclass' maxlength='200'></textarea>
+    </view>
+
+    <view class='formsection'>
+      <button formType='submit'>提交</button>
+    </view>
+  </form>
+</view>
+

@@ -1,0 +1,26 @@
+<!--pages/home/activity/vote/vote.wxml-->
+
+<import src="../../../template/loadTemp.wxml"/>
+<template is="load" data="{{load}}"/>
+
+<view class='tip' hidden='{{status===0?false:true}}'>投票暂未开启，敬请期待...</view>
+<view class='container' hidden='{{status===1 || status ===2 ?false:true}}'>
+  <block wx:for='{{books}}'>
+    <view>
+      <view class='line'></view>
+      <view class='book'>
+        <view class='bookimg'>
+          <image src='{{url + item.bookImg}}' mode='aspectFill'></image>
+        </view>
+        <view class='bookdes'>
+          <text class='booktitle'>{{item.bookName}}</text>
+          <text>{{item.author}}</text>
+          <text>{{item.pubHouse}}</text>
+          <text>{{item.voteReason}}</text>
+          <text>票数 <text class='booknum'>{{item.votes}}</text></text>
+          <button class='bookbtn' catchtap='onVote' data-index='{{index}}' data-bookid='{{item.voteBookId}}' plain='{{status==1?false:true}}' disabled='{{status==1?false:true}}'>投票</button>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

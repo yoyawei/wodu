@@ -1,0 +1,28 @@
+<!--pages/user/info/editinfo.wxml-->
+<view class='container'>
+  <view class='title'>
+    <view class='tip'>修改个人信息</view>
+  </view>
+  <form class='formarea' bindsubmit='formSubmit'>
+    <view class='formsection'>
+      <label for='nickname'>昵称</label>
+      <input name='nickname' placeholder='' value='{{nickname}}'></input>
+    </view>
+    <view class='formsection'>
+      <label for='college'>学院</label>
+      <input name='college' placeholder='请填写学院全称' value='{{college}}'></input>
+    </view>
+    <view class='formsection'>
+      <label for='sex'>性别</label>
+      <radio-group name="sex">
+        <label>
+          <radio value="0" color="#268dcd" />男</label>
+        <label>
+          <radio value="1" color="#268dcd" />女</label>
+      </radio-group>
+    </view>
+    <view class='formsection'>
+      <button formType='submit'>保存</button>
+    </view>
+  </form>
+</view>

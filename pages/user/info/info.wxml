@@ -1,0 +1,62 @@
+<!--pages/user/info/info.wxml-->
+
+
+<import src="../../template/loadTemp.wxml"/>
+<template is="load" data="{{load}}"/>
+
+<view class='container'>
+  <view class='toedit' catchtap='toEdit'>
+      <view>更新基本资料 →</view>
+  </view>
+  <!--学生基本信息  -->
+  <view class='infos'>
+    <view class='info'>
+      <view class='infotitle'>学号</view>
+      <view class='indetail'>{{stuNum}}</view>
+    </view>
+    <view class='info'>
+      <view class='infotitle'>姓名</view>
+      <view class='indetail'>{{name}}</view>
+    </view>
+    <view class='info' bindtap='tophoneTap'>
+      <view class='infotitle'>账号</view>
+      <view class='indetail'>{{phone}}</view>
+      <image src='/images/icons/todetail.png'></image>
+    </view>
+    <view class='info' bindtap='topwdTap'>
+      <view class='infotitle'>密码</view>
+      <view class='indetail'>******</view>
+      <image src='/images/icons/todetail.png'></image>
+    </view>
+  </view>
+
+  <!--账户基本信息  -->
+  <view class='infos'>
+    <view class='info'>
+      <view class='infotitle'>昵称</view>
+      <view class='indetail'>{{nickname}}</view>
+    </view>
+    <view class='info'>
+      <view class='infotitle'>学院</view>
+      <view class='indetail'>{{college}}</view>
+    </view>
+    <view class='info'>
+      <view class='infotitle'>性别</view>
+      <view class='indetail'>{{sex}}</view>
+    </view>
+  </view>
+  <!--账户状态信息  -->
+  <view class='infos'>
+    <view class='info'>
+      <view class='infotitle'>注册时间</view>
+      <view class='indetail'>{{registerTime}}</view>
+    </view>
+    <view class='info'>
+      <view class='infotitle'>最近登录</view>
+      <view class='indetail'>{{loginTime}}</view>
+    </view>
+  </view>
+
+  <view class='logout' bindtap='logout'>退 出</view>
+
+</view>

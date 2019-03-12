@@ -1,0 +1,28 @@
+/* pages/user/help/help.wxss */
+
+.qa{
+  padding:30rpx;
+  font-size: 30rpx;
+  /* margin-bottom: 10rpx; */
+}
+
+.question{
+  border-bottom: 1rpx solid #268dcd;
+  padding-bottom: 15rpx;
+  color: #333;
+}
+
+.answer{
+  border-bottom: 1rpx solid #e5e5e5;    
+  color: #666;
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+  padding-left: 50rpx;
+}
+
+.up{
+  color: #268dcd;
+  font-size: 34rpx;
+  font-weight: bold;
+  margin-right: 10rpx;
+}

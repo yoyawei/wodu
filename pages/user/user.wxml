@@ -1,0 +1,70 @@
+<!--pages/user/user.wxml-->
+
+
+<import src="../template/loadTemp.wxml" />
+<template is="load" data="{{load}}" />
+
+<view class='wel' hidden='{{login}}'>
+  <button class='welbtn' catchtap='toWel'> 登录 / 注册 </button>
+</view>
+
+<view class='container' hidden='{{!login}}'>
+
+  <view class='user'>
+      <view><image class='avatar' src='{{avatarUrl}}'></image></view>
+      <view class='nickname'>{{nickName}}</view>
+  </view>
+  <view class='detail'>
+    <view class='detailitem' catchtap='oninfoTap'>
+      <view>
+        <image src='/images/icons/info.png'></image>
+        <text>个人信息</text>
+      </view> 
+      <image src='/images/icons/todetail.png'></image>
+    </view>
+    <view class='detailitem' catchtap='onstatusTap'>
+      <view>
+        <image src='/images/icons/order.png'></image>
+        <text>预约状态</text>
+      </view> 
+      <image src='/images/icons/todetail.png'></image>
+    </view>
+
+    <view class='detailitem' catchtap='onfollowTap'>
+      <view>
+        <image src='/images/icons/follow.png'></image>
+        <text>我的关注</text>
+      </view> 
+      <image src='/images/icons/todetail.png'></image>
+    </view>
+
+    <view class='detailitem' catchtap='onsharedTap'>
+      <view>
+        <image src='/images/icons/myshare.png'></image>
+        <text>我的分享</text>
+      </view> 
+      <image src='/images/icons/todetail.png'></image>
+    </view>
+    <view class='detailitem' catchtap='onhistoryTap'>
+      <view>
+        <image src='/images/icons/mycomment.png'></image>
+        <text>书评历史</text>
+      </view> 
+      <image src='/images/icons/todetail.png'></image>
+    </view>
+    <view class='detailitem' catchtap='onhelpTap'>
+      <view>
+        <image src='/images/icons/help.png'></image>
+        <text>帮助</text>
+      </view> 
+      <image src='/images/icons/todetail.png'></image>
+    </view>
+    <view class='detailitem'  catchtap='onfeedbackTap'>
+      <view>
+        <image src='/images/icons/feedback.png'></image>
+        <text>反馈</text>
+      </view> 
+      <image src='/images/icons/todetail.png'></image>
+    </view>
+  </view>
+</view>

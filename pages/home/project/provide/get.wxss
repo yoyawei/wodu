@@ -1,0 +1,87 @@
+/* pages/home/project/provide/get.wxss */
+
+.title{
+  padding: 30rpx 40rpx 15rpx 40rpx;
+  font-size: 36rpx;
+  color: #333;
+  line-height: 72rpx;
+  background-color: #f2f2f2; 
+}
+
+.tip{
+  font-size: 28rpx;
+  color: #666;
+  margin-left: 15rpx;
+}
+
+.formarea{
+  padding: 20rpx 60rpx;
+}
+
+.formsection{
+  height: 88rpx;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10rpx; 
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.formsection label{
+  width: 150rpx;
+  margin-right: 20rpx;
+  font-size: 32rpx;
+  line-height: 88rpx;
+  color: #666; 
+  letter-spacing: 5rpx; 
+}
+
+.formsection input{
+  height: 88rpx;
+  font-size: 32rpx;
+  line-height: 88rpx;
+  color: #333;
+}
+
+.formarea button{
+  width: 690rpx;
+  height: 88rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  font-size: 34rpx;
+  color: #fff;
+  background-color: #268dcd;
+}
+
+.info{
+  margin: 20rpx;
+  font-size: 34rpx;
+  line-height: 60rpx;
+  color: #268dcd;
+}
+
+picker{
+  flex: 1;
+}
+
+.alast{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  background-color: #fff;
+  overflow: scroll;
+}
+
+.agree{
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  background-color: #268dcd;
+  border-radius: 10rpx;
+  width: 300rpx;
+  height: 88rpx;
+  margin: 20rpx auto;
+  line-height: 88rpx;
+}

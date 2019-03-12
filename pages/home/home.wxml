@@ -1,0 +1,108 @@
+<!--home.wxml  -->
+
+<import src="../template/loadTemp.wxml"/>
+<template is="load" data="{{load}}"/>
+
+<view class='container' hidden='{{load}}'>
+
+  <swiper indicator-dots='true' autoplay='true' interval='5000' circular='true'>
+    <block wx:for='{{imgUrls}}'>
+      <navigator url="{{item.navi}}" hover-class="none">
+        <swiper-item>
+          <image class='slideimg' src='{{item.imgurl}}' mode='aspectFill'></image>
+        </swiper-item>
+      </navigator>
+    </block>
+  </swiper>
+
+  <navigator class='searsharea' url="project/want/want?fromtype=0" hover-class="none">
+    <view class='searsh'>
+      <image src='/images/icons/search.png'></image>
+      <text>搜索图书/出版社/作者</text>
+    </view>
+  </navigator>
+
+  <view class='main'>
+    <navigator class='mainitem' url="project/share/share" hover-class="none">
+      <view class='mainimg'>
+        <image src='/images/icons/shares.png'></image>
+      </view>
+      <text>分享图书</text>
+    </navigator>
+    <navigator class='mainitem' url="project/provide/provide" hover-class="none">
+      <view class='mainimg'>
+        <image src='/images/icons/books.png'></image>
+      </view>
+      <text>书库</text>
+    </navigator>
+    <navigator class='mainitem' url="activity/wish/wish" hover-class="none">
+      <view class='mainimg'>
+        <image src='/images/icons/wishs.png'></image>
+      </view>
+      <text>愿望书单</text>
+    </navigator>
+  </view>
+
+  <view class='box'>
+    <navigator class="title" url="data/ranking/ranking" hover-class="none">
+      <text>排行榜</text>
+      <text>更多 ></text>
+    </navigator>
+    <scroll-view class="scrollwrap" scroll-x>
+      <block wx:for='{{books}}'>
+        <view class='bookwrap'>
+          <view class='book' catchtap='toBook' data-bookid='{{item.isbn}}'>
+            <image class='bookimg' src='{{url + item.bookImg}}' mode='aspectFill'></image>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+   <navigator class='box' url="data/comment/comment" hover-class="none">
+    <view class="title">
+      <text>精彩书评</text>
+      <text>更多 ></text>
+    </view>
+    <view class='comment'>
+      <view class='subtitle'>关于《{{bestpost[1].postBookName}}》</view>
+      <view class='detail cdetail'>
+        {{bestpost[1].postContent}}
+      </view>
+      <view class='name'>—— {{bestpost[1].postAuthor}}</view>
+    </view>
+  </navigator>
+
+   <navigator class='box' url="data/recommend/recommend" hover-class="none">
+    <view class="title">
+      <text>好书推荐</text>
+      <text>更多 ></text>
+    </view>
+    <view class='recommend'>
+      <view>
+        <image class='bookimg' src='{{url + rbook[0].picture}}' mode='aspectFill'></image>
+      </view>
+      <view class='rcontent'>
+        <view class='subtitle'>《{{rbook[0].title}}》</view>
+        <view class='detail rdetail'>
+          {{rbook[0].description}}
+        </view>
+      </view>
+    </view>
+  </navigator>  
+
+  <view class='box'>
+    <view class="title">
+      <text>活动中心</text>
+    </view>
+    <view class='activity'>
+      <navigator url="activity/vote/vote" hover-class="none">
+        <image src='/images/activity1.png' mode='aspectFill'></image>
+      </navigator>
+      <navigator url="activity/meeting/meeting" hover-class="none">
+        <image src='/images/activity2.png' mode='aspectFill'></image>
+      </navigator>
+    </view>
+  </view>
+
+</view>

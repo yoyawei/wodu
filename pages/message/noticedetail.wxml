@@ -1,0 +1,17 @@
+<!--pages/message/noticedetail.wxml-->
+
+<import src="../template/loadTemp.wxml"/>
+<template is="load" data="{{load}}"/>
+
+<view class='container'>
+    <view wx:if='{{messagetype == 5}}' class='wrap' catchtap='toPost' data-commentid='{{notice.sendId}}'>
+      <view class='ntype'>{{types[notice.messageType]}}</view>
+      <view class='ndetails canlink'>{{notice.content}}</view>
+      <view class='time'>{{notice.date}}</view>
+    </view>
+    <view wx:else class='wrap'>
+      <view class='ntype'>{{types[notice.messageType]}}</view>
+      <view class='ndetails'>{{notice.content}}</view>
+      <view class='time'>{{notice.date}}</view>
+    </view>
+</view>
